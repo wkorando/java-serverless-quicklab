@@ -4,18 +4,19 @@ Serverless functions are an emerging technology for decomposing business operati
 
 In this quicklab we will look at how to write Serverless Functions in Java and run them on [Apache Openwhisk](https://openwhisk.apache.org/) hosted on IBM Cloud. 
 
-## Installation Prerequisites: 
+## Prerequisites: 
 <details>
   <summary>Click to expand</summary>
   
 1. Install Java 8+
+2. Install IBM Cloud CLI
 
 </details>
 
 
 ## 0. Setup
 
-1. [Create IBM Cloud Account](https://ibm.biz/BdzhjJ)
+1. [Create an IBM Cloud Account](https://ibm.biz/BdzhjJ)
 2. Open terminal
 3. Login into IBM Cloud CLI: 
 
@@ -30,7 +31,7 @@ In this quicklab we will look at how to write Serverless Functions in Java and r
 4. Clone repo: 
 
 	```
-	git clone https://github.com/wkorando/serverless-java-quicklab.git
+	git clone https://github.com/wkorando/java-serverless-quicklab.git
 	```
 5. Change directory to cloned repo:
 
