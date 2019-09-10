@@ -9,7 +9,16 @@ In this quicklab we will look at how to write Serverless Functions in Java and r
   <summary>Click to expand</summary>
   
 1. Install Java 8+
-2. Install IBM Cloud CLI
+
+	```
+	brew cask install java
+	```
+2. [Install IBM Cloud CLI](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/)
+3. Install IBM Cloud Functions Plugin
+
+	```
+	ibmcloud plugin install cloud-functions
+	```
 
 </details>
 
