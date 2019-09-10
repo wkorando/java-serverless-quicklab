@@ -7,6 +7,7 @@ In this quicklab we will look at how to write Serverless Functions in Java and r
 ## Prerequisites: 
 <details>
   <summary>Click to expand</summary>
+Here are the steps for configuring a Mac machine for this quicklab
   
 1. Install Java 8+
 
@@ -19,6 +20,10 @@ In this quicklab we will look at how to write Serverless Functions in Java and r
 	```
 	ibmcloud plugin install cloud-functions
 	```
+4. Install git
+	```
+	brew install git
+	```	
 
 </details>
 
@@ -73,7 +78,7 @@ Let's build and deploy our own Java serverless function.
 1. Build and jar the Java application:
 
 	```
-	mvn package
+	./mvnw package
 	``` 
 2. Deploy the function to IBM Cloud:
 
