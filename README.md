@@ -30,7 +30,7 @@ Here are the steps for configuring a Mac machine for this quicklab
 
 ## 0. Setup
 
-1. [Create an IBM Cloud Account](https://ibm.biz/BdzhjJ)
+1. <a href="https://ibm.biz/BdzhjJ"  target="_blank">Create an IBM Cloud Account</a>
 2. Open terminal
 3. Login into IBM Cloud CLI: 
 
