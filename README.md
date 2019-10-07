@@ -30,7 +30,7 @@ Here are the steps for configuring a Mac machine for this quicklab
 
 ## 0. Setup
 
-1. <a href="ibm.biz/springonelab"  target="_blank">Create an IBM Cloud Account</a>
+1. <a href="https://ibm.biz/springonelab"  target="_blank">Create an IBM Cloud Account</a>
 2. Open terminal
 3. Login into IBM Cloud CLI: 
 
@@ -45,12 +45,12 @@ Here are the steps for configuring a Mac machine for this quicklab
 4. Clone repo: 
 
 	```
-	git clone https://github.com/wkorando/java-serverless-quicklab.git
+	git clone https://github.com/wkorando/java-serverless-quicklab
 	```
 5. Change directory to cloned repo:
 
 	```
-	cd serverless-java-quicklab
+	cd java-serverless-quicklab
 	``` 	
 
 ## 1. Execute a Serverless Function with the IBM Cloud CLI
