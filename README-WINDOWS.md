@@ -4,18 +4,12 @@ Serverless functions are an emerging technology for decomposing business operati
 
 In this quicklab we will look at how to write Serverless Functions in Java and run them on [Apache Openwhisk](https://openwhisk.apache.org/) hosted on IBM Cloud. 
 
-If you are running this lab on a Windows machine, use these [instructions](README-WINDOWS.md).
-
 ## Prerequisites: 
 <details>
   <summary>Click to expand</summary>
-Here are the steps for configuring a Mac machine for this quicklab
+Below are the requirements for running this quicklab:
   
 1. Install Java 8+
-
-	```
-	brew cask install java
-	```
 2. [Install IBM Cloud CLI](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/)
 3. Install IBM Cloud Functions Plugin
 
@@ -23,9 +17,7 @@ Here are the steps for configuring a Mac machine for this quicklab
 	ibmcloud plugin install cloud-functions
 	```
 4. Install git
-	```
-	brew install git
-	```	
+5. Install cygwin
 
 </details>
 
@@ -80,7 +72,7 @@ Let's build and deploy our own Java serverless function.
 1. Build and jar the Java application:
 
 	```
-	.\mvnw package
+	./mvnw.cmd package
 	``` 
 2. Deploy the function to IBM Cloud:
 
@@ -348,7 +340,7 @@ So far we have been just return JSON from our function, but functions are more f
 6. Rebuild the Java .jar
 
 	```
-	./mvnw package
+	./mvnw.cmd package
 	```	
 	
 7. Functions can be updated if you want to change their behavior. To our existing fuinction run the following command:
