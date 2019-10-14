@@ -80,7 +80,7 @@ Let's build and deploy our own Java serverless function.
 1. Build and jar the Java application:
 
 	```
-	.\mvnw package
+	./mvnw package
 	``` 
 2. Deploy the function to IBM Cloud:
 
