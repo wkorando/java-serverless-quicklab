@@ -60,7 +60,7 @@ Here are the steps for configuring a Mac machine for this quicklab
 1. Run the following command to invoke a test function from the command-line:
 
    ```
-   ibmcloud wsk action invoke whisk.system/utils/echo -p message hello --result
+   ibmcloud fn action invoke whisk.system/utils/echo -p message hello --result
    ```
    
    You should get back a result that looks like this:
@@ -85,12 +85,12 @@ Let's build and deploy our own Java serverless function.
 2. Deploy the function to IBM Cloud:
 
 	```
-	ibmcloud wsk action create helloJava target/hello-world-java.jar --main com.example.FunctionApp
+	ibmcloud fn action create helloJava target/hello-world-java.jar --main com.example.FunctionApp
 	```
 3. Execute the function:
 
 	```
-	ibmcloud wsk action invoke --result helloJava --param name World
+	ibmcloud fn action invoke --result helloJava --param name World
 	```
 	
 	You should see:
@@ -115,7 +115,7 @@ So far we have been executing functions synchronously with the `--result` tag. L
 1. To execute a function in asynchronous mode simply omit `--result` when invoking the function:  
 
 	```
-	ibmcloud wsk action invoke helloJava --param name World
+	ibmcloud fn action invoke helloJava --param name World
 	```
 	
    You should get a response that includes an id you can use to look up the result of the function later:
@@ -127,7 +127,7 @@ So far we have been executing functions synchronously with the `--result` tag. L
 2. Use the below command to retrieve the result of the function invocation:
     
     ```
-    ibmcloud wsk activation result [id]
+    ibmcloud fn activation result [id]
     ```
     You should get a response that looks something like this:
     
@@ -146,7 +146,7 @@ When invoking a function OpenWhisk is generating diagnostic information that can
 1. You can view the invocation information of the function we executed earlier with this command:
 
 	```
-	ibmcloud wsk activation get [id]
+	ibmcloud fn activation get [id]
 	```
 	
 	You should get a response back that looks something like this:
@@ -211,12 +211,12 @@ When invoking a function OpenWhisk is generating diagnostic information that can
 	
 ### Viewing Function Invocation Logs
 
-`ibmcloud wsk activation get` returns the logs from an invocation, but you can also just view the logs from innvocation to make debugging a bit easier. 
+`ibmcloud fn activation get` returns the logs from an invocation, but you can also just view the logs from innvocation to make debugging a bit easier. 
 
 1. To view the logs from an invocation run the following:
 
 	```
-	ibmcloud wsk activation logs [id]
+	ibmcloud fn activation logs [id]
 	```
 	You should get a return thaty looks like this:
 	
@@ -227,7 +227,7 @@ When invoking a function OpenWhisk is generating diagnostic information that can
 2. For longer running functions, you can tail the logs a function is producing with the following command:
 
 	```
-	ibmcloud wsk activation poll [id]
+	ibmcloud fn activation poll [id]
 	```
 
 ### Retrieve Most Recent Function Execution
@@ -235,7 +235,7 @@ When invoking a function OpenWhisk is generating diagnostic information that can
 For shorthand purposes you can use the tag `--last` in-lieu of an id to retrieve information about an activation. 
 
 ```
-ibmcloud wsk activation [get|result|logs] --last
+ibmcloud fn activation [get|result|logs] --last
 ```
 
 ### Show Recent Function Invocations 
@@ -243,7 +243,7 @@ ibmcloud wsk activation [get|result|logs] --last
 You can view recent function invocations; id, function executed with the following:
 
 ```
-ibmcloud wsk activation list
+ibmcloud fn activation list
 ```
 
 ### Show Available Functions
@@ -251,7 +251,7 @@ ibmcloud wsk activation list
 You can view a list of all functions available in the current namespace with the following:
 
 ```
-ibmcloud wsk list
+ibmcloud fn list
 ```
 
 ## 4. Creating Web Actions
@@ -267,7 +267,7 @@ Functions can be setup so they can be called directly over http as well. Let's t
 2. To find the url to execute the function run the following:
 
 	```
-	ibmcloud wsk action get helloJava --url
+	ibmcloud fn action get helloJava --url
 	```
 	
 	This command will return with the url to call you function:
@@ -354,7 +354,7 @@ So far we have been just return JSON from our function, but functions are more f
 7. Functions can be updated if you want to change their behavior. To our existing fuinction run the following command:
 
 	``` 
-	ibmcloud wsk action create webHello target/hello-world-java.jar --main com.example.WebHello --web true 
+	ibmcloud fn action create webHello target/hello-world-java.jar --main com.example.WebHello --web true 
 	``` 
 
 4. Get the url for the function with the following command like earlier:
@@ -379,3 +379,4 @@ We are only scratching the surface of all that is possible with serverless funct
 To learn more check out this repo: [https://github.com/prpatel/serverless-java-mini-workshop](https://github.com/prpatel/serverless-java-mini-workshop)
 
 **Collaborator:** Pratik Patel [Github](https://github.com/prpatel) [Twitter](https://twitter.com/prpatel)
+fn
